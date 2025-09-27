@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('beritas', function (Blueprint $table) {
-    $table->string('gambar')->nullable();
-    });
-
+        Schema::create('galleries', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,8 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('beritas', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('galleries');
     }
 };

@@ -24,17 +24,18 @@
                         {{ __('Berita') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('berita.index')" :active="request()->routeIs('artikel.*')">
-                        {{ __('Artikel') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('berita.index')" :active="request()->routeIs('artikel.*')">
+                    <x-nav-link :href="route('galeri.index')" :active="request()->routeIs('artikel.*')">
                         {{ __('Galeri') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('berita.index')" :active="request()->routeIs('forum.*')">
                         {{ __('Forum') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('berita.index')" :active="request()->routeIs('artikel.*')">
+                        {{ __('Administrasi') }}
+                    </x-nav-link>
+
                 </div>
                 <div class="max-w-md mx-auto">
                     <form action="{{ route('berita.index') }}" method="GET" class="flex items-center space-x-2">
@@ -109,6 +110,25 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('budaya.index')" :active="request()->routeIs('budaya.index')">
+                {{ __('Budaya') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('berita.index')" :active="request()->routeIs('berita.index')">
+                {{ __('Berita') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('galeri.index')" :active="request()->routeIs('galeri')">
+                {{ __('Galeri') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('berita.index')" :active="request()->routeIs('dashboard')">
+                {{ __('Forum') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('berita.index')" :active="request()->routeIs('dashboard')">
+                {{ __('Administrasi') }}
             </x-responsive-nav-link>
         </div>
 
